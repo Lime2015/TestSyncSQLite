@@ -120,7 +120,7 @@ public class MainActivity extends ActionBarActivity {
             if (controller.dbSyncCount() != 0) {
                 prgDialog.show();
                 params.put("usersJSON", controller.composeJSONfromSQLite());
-                String url = "http://" + "192.168.25.22" + ":9080/WatchAssemblyWebServer/saveUsers.do";
+                String url = "http://" + "172.30.10.207" + ":9080/WatchAssemblyWebServer/saveUsers.do";
                 Log.d("url", url);
                 client.post(url, params, new AsyncHttpResponseHandler() {
                     @Override
